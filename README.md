@@ -1,2 +1,3 @@
-# MONGGO DI WOCO SEK NGGE 
-REPO Task & Practicing Skrip Bahasa Jawa
+#Phase-0 Assignment
+>_No preasure, preasure is for tires_~** [Aer Lingus Captain]**
+
