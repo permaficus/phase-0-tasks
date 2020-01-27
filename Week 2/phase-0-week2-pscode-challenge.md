@@ -27,16 +27,16 @@
 1. SET gombal IS 20
 2. SET machine_switch_on IS 0
 3. SET handling_capacity IS 10
-4. FOR 1 TO (gombal DIVIDED BY handling_capacity)<br>
-   <pre>PUT handling_capacity OF gombal INTO machine</pre><br>
+4. <pre>FOR 1 TO (gombal DIVIDED BY handling_capacity)<br>
+            PUT handling_capacity OF gombal INTO machine
    END FOR<br>
-   machine_switch_on EQUAL TO 1
+   machine_switch_on EQUAL TO 1</pre>
 
 ## Manicure
 
 1. SET student IS EQUAL TO 40
 2. FOR 1 TO student<br>
-      <pre>IF fingel_nail EQUAL TO long THEN</pre><br>
+      <pre>IF fingel_nail EQUAL TO long THEN</pre>
          punished EQUAL TO TRUE<br>
       ELSE <br>
          compliment EQUAL TO TRUE<br>
