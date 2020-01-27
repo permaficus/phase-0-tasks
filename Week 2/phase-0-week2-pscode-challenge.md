@@ -4,7 +4,7 @@
 
 # Table of Contents
 
-1. <a href="#newton second law">Newton Second Law</a>
+1. <a href="#newton&nbspsecond&nbsplaw">Newton Second Law</a>
 2. <a href="#leap year">Leap Year</a>
 3. <a href="#laundry">Laundry Day</a>
 4. <a href="#manicure">Manicure</a>
