@@ -37,7 +37,7 @@
     FOR 1 TO (gombal DIVIDED BY handling_capacity)
         PUT handling_capacity OF gombal INTO machine
     END FOR
-        machine_switch_on EQUAL TO 1
+    machine_switch_on EQUAL TO 1
 </pre>
 
 ## Manicure
