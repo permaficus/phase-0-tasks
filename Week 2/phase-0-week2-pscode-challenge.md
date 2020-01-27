@@ -4,18 +4,18 @@
 
 # Table of Contents
 
-1. <a href="#newton&nbspsecond&nbsplaw">Newton Second Law</a>
-2. <a href="#leap year">Leap Year</a>
+1. <a href="#newton">Newton Second Law</a>
+2. <a href="#leap">Leap Year</a>
 3. <a href="#laundry">Laundry Day</a>
 4. <a href="#manicure">Manicure</a>
 
-# Newton Second Law.
+# Newton
 
 1. GET m EQUAL TO 600 and a EQUAL TO 2
 2. CALCULATE m * a
 3. OUTPUT 1200N
 
-# Leap Year
+# Leap
 
 1. GET year
 2. PROCESS
