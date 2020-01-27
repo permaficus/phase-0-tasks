@@ -28,7 +28,7 @@
 2. SET machine_switch_on IS 0
 3. SET handling_capacity IS 10
 4. FOR 1 TO (gombal DIVIDED BY handling_capacity)<br>
-     PUT handling_capacity OF gombal INTO machine<br>
+   <pre>PUT handling_capacity OF gombal INTO machine</pre><br>
    END FOR<br>
    machine_switch_on EQUAL TO 1
 
@@ -36,7 +36,7 @@
 
 1. SET student IS EQUAL TO 40
 2. FOR 1 TO student<br>
-      IF fingel_nail EQUAL TO long THEN<br>
+      <pre>IF fingel_nail EQUAL TO long THEN</pre><br>
          punished EQUAL TO TRUE<br>
       ELSE <br>
          compliment EQUAL TO TRUE<br>
