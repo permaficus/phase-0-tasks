@@ -17,12 +17,12 @@
 
 1. GET year
 2. PROCESS
-<pre>
-   **IF year modulo/% 4 IS zero AND year modulo/% 100 IS zero AND year modulo/% 400 IS zero THEN
+<pre style="font-weight: bold">
+   IF year modulo/% 4 IS zero AND year modulo/% 100 IS zero AND year modulo/% 400 IS zero THEN
         OUTPUT leap_year IS TRUE
    ELSE
         OUTPUT common_year IS TRUE
-   END IF**
+   END IF
 </pre>
 
 # Laundry
