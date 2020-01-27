@@ -16,30 +16,38 @@
 # Leap Year
 
 1. GET year
-2. IF year modulo/% 4 IS zero AND year modulo/% 100 IS zero AND year modulo/% 400 IS zero THEN <br>
-   OUTPUT leap_year IS TRUE<br>
-   ELSE<br>
-   OUTPUT common_year IS TRUE<br>
-   END IF
+2. PROCESS
+<pre>
+   **IF year modulo/% 4 IS zero AND year modulo/% 100 IS zero AND year modulo/% 400 IS zero THEN
+        OUTPUT leap_year IS TRUE
+   ELSE
+        OUTPUT common_year IS TRUE
+   END IF**
+</pre>
 
 # Laundry
 
 1. SET gombal IS 20
 2. SET machine_switch_on IS 0
 3. SET handling_capacity IS 10
-4. <pre>FOR 1 TO (gombal DIVIDED BY handling_capacity)<br>
-            PUT handling_capacity OF gombal INTO machine
-   END FOR<br>
-   machine_switch_on EQUAL TO 1</pre>
+4. PROCESS
+<pre>
+    FOR 1 TO (gombal DIVIDED BY handling_capacity)
+        PUT handling_capacity OF gombal INTO machine
+    END FOR
+        machine_switch_on EQUAL TO 1
+</pre>
 
 ## Manicure
 
 1. SET student IS EQUAL TO 40
-2. FOR 1 TO student<br>
-      <pre>IF fingel_nail EQUAL TO long THEN</pre>
-         punished EQUAL TO TRUE<br>
-      ELSE <br>
-         compliment EQUAL TO TRUE<br>
-      END IF<br>
+2. PROCESS
+<pre>
+    FOR 1 TO student
+        IF fingel_nail EQUAL TO long THEN
+            punished EQUAL TO TRUE
+        ELSE
+            compliment EQUAL TO TRUE
+        END IF
    END FOR 
-
+</pre>
