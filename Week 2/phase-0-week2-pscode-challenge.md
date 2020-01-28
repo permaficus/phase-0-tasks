@@ -78,7 +78,7 @@
 1. We already know that the class has 40 students
 2. Because today is Manicure day, so the teacher start to check all the students finger nail
 3. Miss Robinson (The teachers name if you wondering), start the process by check them one by one
-4. If Miss Robinson find a student with long finger nail, then she give him/her a punishment.
+4. If Miss Robinson find a student with long finger nail, then she give he/she a punishment.
 5. If not, they will get a Nice Job! pad at their shoulder.
 
 ## Pseudocode
