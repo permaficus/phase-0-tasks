@@ -1,0 +1,1 @@
+![codecademy_js_syllabus_3](/Week%202/cademy_sil_3/cademy-sil-3.png)
