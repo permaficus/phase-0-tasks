@@ -6,7 +6,7 @@ formatDate = () => {
 
     switch (true){
         case (month >=1 && month <= 12) : console.log(`${date} ${monthDict[month]} ${year}`);break;
-        default : console.log('Invalid Month');break;
+        default : console.log('Invalid Month');
     }
 }
 
