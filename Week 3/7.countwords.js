@@ -1,4 +1,14 @@
-countWords = str => {return str.match(/\w+/g).length;}
+countWords = str => {
+    // return str.match(/\w+/g).length;
+    let count = 1;
+    for (let c in str) {
+        if (str[c]===' ') {
+            count++
+        }
+    }
+
+    return count;
+}
 
 // TEST CASES
 console.log(countWords('I have a dream')); // 4
