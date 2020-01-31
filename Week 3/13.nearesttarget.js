@@ -15,8 +15,8 @@ console.log(nearestTarget([' ', ' ', 'o', ' ']),0);
 console.log(nearestTarget([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x']),2);
 console.log('\nSTARTING TEST CASE 2 -------------------------------------------\n')
 // TEST CASE 2
-console.log(nearestTarget([' ', 'x', ' ','o' ,' ', 'x', ' ', ' ', 'x']),2); // 2
-console.log(nearestTarget([' ', ' ', ' ', 'x', 'x', 'o', ' ', 'x']),1); // 1
-console.log(nearestTarget([' ', 'o', ' ', ' ', 'x', ' ', ' ', 'x']),3); // 3
-console.log(nearestTarget([' ', 'x', 'o', '', 'x', ' ', ' ', 'x']),1); // 1
-console.log(nearestTarget(['o', ' ', ' ', 'x', 'x', ' ', ' ', 'x']),3); // 3
+console.log(nearestTarget([' ', 'x', ' ','o' ,' ', 'x', ' ', ' ', 'x']),2);
+console.log(nearestTarget([' ', ' ', ' ', 'x', 'x', 'o', ' ', 'x']),1);
+console.log(nearestTarget([' ', 'o', ' ', ' ', 'x', ' ', ' ', 'x']),3);
+console.log(nearestTarget([' ', 'x', 'o', '', 'x', ' ', ' ', 'x']),1);
+console.log(nearestTarget(['o', ' ', ' ', 'x', 'x', ' ', ' ', 'x']),3);
