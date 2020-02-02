@@ -2,8 +2,8 @@
 
 # Table of Contents
 
-5. <a href="/Week%205/">Damage Calulcation</a>
-6. <a href="/Week%205/">Melee Grouping</a>
+5. <a href="/Week%205/5.dacalc.js/">Damage Calulcation</a>
+6. <a href="/Week%205/6.meleeranged.js">Melee Grouping</a>
 7. <a href="/Week%205/7.removechar.js">Remove Special Char</a>
 8. <a href="/Week%205/8.findsuspect.js">Cari Pelaku</a>
 13. <a href="/Week%205/13.mfln.js">Most Frequent Large Number</a>
