@@ -8,8 +8,8 @@ findmedian = arr => {
 }
 
 // TEST CASES
-console.log(findmedian([1, 2, 3, 4, 5])); // 3
-console.log(findmedian([1, 3, 4, 10, 12, 13])); // 7
-console.log(findmedian([3, 4, 7, 6, 10])); // 7
-console.log(findmedian([1, 3, 3])); // 3
-console.log(findmedian([7, 7, 8, 8])); // 7.5
+console.log(findmedian([1, 2, 3, 4, 5]),'Expected 3');
+console.log(findmedian([1, 3, 4, 10, 12, 13]),'Expected 7'); 
+console.log(findmedian([3, 4, 7, 6, 10]),'Expected 6 not 7');
+console.log(findmedian([1, 3, 3]),'Expected 3');
+console.log(findmedian([7, 7, 8, 8]),'Expected 7.5');

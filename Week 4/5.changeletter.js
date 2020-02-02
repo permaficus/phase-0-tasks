@@ -4,8 +4,6 @@ changeLetter = str => {
     // return str.replace(/([a-z])/g,(char)=>{return (char=='z')? 'a'
     //      :String.fromCharCode(char.charCodeAt()+1)})
 
-    
-    // AS INSTRUCTED ON PHASE-0
     let dict = '_abcdefghijklmnopqrstuvwxyz', newStr = '';
     
     for (let i in str) {

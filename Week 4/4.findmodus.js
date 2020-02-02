@@ -10,8 +10,8 @@
  }
 
  // TEST CASES
-console.log(findModus([10, 4, 5, 2, 4])); // 4
-console.log(findModus([5, 10, 10, 6, 5])); // 5
-console.log(findModus([10, 3, 1, 2, 5])); // -1
-console.log(findModus([1, 2, 3, 3, 4, 5])); // 3
-console.log(findModus([7, 7, 7, 7, 7])); // -1
+console.log(findModus([10, 4, 5, 2, 4]),'Expected 4');
+console.log(findModus([5, 10, 10, 6, 5]),'Expected 5');
+console.log(findModus([10, 3, 1, 2, 5]),'Expected -1');
+console.log(findModus([1, 2, 3, 3, 4, 5]),'Expected 3');
+console.log(findModus([7, 7, 7, 7, 7]),'Expected -1');
