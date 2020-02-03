@@ -3,15 +3,10 @@ shopping = (member,money) => {
     if (!member || member.length==0 || money < 50000) { 
         return "Either you're not a member or you dont have enough money";}
 
-    const products = {
-        'Sepatu Stacattu':1500000,
-        'Baju Zoro':500000,
-        'Baju brand H&N':250000,
-        'Sweater Uniklooh':175000,
-        'Casing Handphone':50000
-    }
+    const products = {'Sepatu Stacattu':1500000,'Baju Zoro':500000,'Baju brand H&N':250000,
+        'Sweater Uniklooh':175000,'Casing Handphone':50000}
 
-    // does the logic using build in is different from using non build in ?
+    // does the logic using built in is really that different from using non built in ?
 
     let am = money, 
     avp = Object.keys(products).map((a)=> ( am - products[a] < 0) ? am - products[a] : am -= products[a])
