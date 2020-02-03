@@ -10,6 +10,9 @@ shopping = (member,money) => {
         'Sweater Uniklooh':175000,
         'Casing Handphone':50000
     }
+
+    // does the logic using build in is different from using non build in ?
+
     let am = money, 
     avp = Object.keys(products).map((a)=> ( am - products[a] < 0) ? am - products[a] : am -= products[a])
         .filter((b)=> b >= 0);
