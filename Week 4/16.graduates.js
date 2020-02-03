@@ -11,7 +11,7 @@ graduates = data => {
 
     // LONG VERSION
 
-    let cache = [], obj = {};
+    let obj = {};
 
     const gradStudents = className => {
         let name = {}, students = [];  
