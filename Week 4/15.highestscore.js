@@ -1,14 +1,45 @@
 highestScore = data => {
 
     // SHORT VERSION
-    return data.reduce((a,b)=>{
-        a[b.class] = a[b.class] || data.filter( el =>el.class==b.class)
-            .reduce((a,b)=> (a.score>b.score)?a:b);
-        delete b.class;
-        return a;
+    // return data.reduce((a,b)=>{
+    //     a[b.class] = a[b.class] || data.filter( el =>el.class==b.class)
+    //         .reduce((a,b)=> (a.score>b.score)?a:b);
+    //     delete b.class;
+    //     return a;
 
-    },{})
+    // },{})
     
+    let cache = [], results = {};
+    
+    for (let i = 0; i < data.length; i++) {
+      
+      let className = data[i].class;
+      (!cache.includes(className)) ? cache.push(className):'';
+      
+    }
+    
+    for (let i=0;i< cache.length;i++) {
+      
+      let obj = {}, highest = 0;
+
+      for (let n=0;n< data.length;n++) {
+
+        if (cache[i] === data[n].class && data[n].score > highest) {
+        
+            highest = data[n].score;
+            obj.name = data[n].name;
+            obj.score = data[n].score;
+        
+        }
+        
+        results[cache[i]] = obj;
+      
+      }
+    
+    }
+  
+    return results;
+
 }
 
 
