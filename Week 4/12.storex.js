@@ -19,10 +19,10 @@ countProfit = data => {
         return sum;
     }
 
-    const getShopper = product => {
+    const getShopper = (product,stock) => {
         let shopper = [];
         for (let s in data) {
-          if (product == data[s].product) {shopper.push(data[s].name)}
+          if (product == data[s].product && data[s].amount < stock) {shopper.push(data[s].name)}
         }
         return shopper;
     }
@@ -45,7 +45,7 @@ countProfit = data => {
         // cache.Shoppers = (stock >= 0) ? data.map(el => {return (el.product == stockCard[b][0]) ? el.name:''})
           // .filter(name=>name!==''): [];
         
-        cache.Shoppers = (stock >=0) ? getShopper(stockCard[b][0]):[]
+        cache.Shoppers = (stock >=0) ? getShopper(stockCard[b][0],stockCard[b][2]):[]
 
         cache.leftOver = (stock < 0) ? stockCard[b][2]:stock;
         cache.Profit = (stock < 0) ? 0:stockCard[b][1] * eligibleQty;
@@ -73,7 +73,7 @@ console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2},
 //   leftOver: 1,
 //   totalProfit: 0 } ]
 console.log('\n ---------- NEW LINE -----------\n')
-console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
+console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 4}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
 // [ { product: 'Sepatu Stacattu',
 //     shoppers: [ 'Windi' ],
 //     leftOver: 2,
