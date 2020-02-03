@@ -9,6 +9,8 @@ highestScore = data => {
 
     // },{})
     
+
+    // LONG VERSION
     let cache = [], results = {};
     
     for (let i = 0; i < data.length; i++) {
