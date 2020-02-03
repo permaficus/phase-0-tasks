@@ -58,24 +58,27 @@ var param = 'letter' //kalian bisa mengisi param ini dengan 'sigma', 'letters', 
 
 countSomething = () => {
 
-    const an = [0,1,2,3,4,5,6,7,8,9]
-    const words = 'abcdefghijklmnopqrstuvwxyz'
-    let c = 1, sum = 0;
+    // const an = [0,1,2,3,4,5,6,7,8,9]
+    // const words = 'abcdefghijklmnopqrstuvwxyz'
+    // let c = 1, sum = 0;
 
-    const sigma = str => {
-        for (let i=0;i<str.length;i++) {  
-        sum += (an.includes(+str[i])>0) ? an[+str[i]]:0}
-        return sum;
-    }
+    // const sigma = str => {
+    //     for (let i=0;i<str.length;i++) {  
+    //     sum += (an.includes(+str[i])>0) ? an[+str[i]]:0}
+    //     return sum;
+    // }
 
-    const letter = str => {
-        for (let i=0;i<= str.length; i++) {c += (words.indexOf(str[i])>0) ? 1:0;}
-        return c;
-    }
+    // const letter = str => {
+    //     for (let i=0;i<= str.length; i++) {c += (words.indexOf(str[i])>0) ? 1:0;}
+    //     return c;
+    // }
 
-    const len = str => {return str.length;}
+    // const len = str => {return str.length;}
 
-    return (param == 'sigma') ? sigma(line):((param == 'letter') ? letter(line):len(line));
+    // return (param == 'sigma') ? sigma(line):((param == 'letter') ? letter(line):len(line));
+
+    return (param == 'sigma') ? eval(line.match(/\d/g).join('+')):((param == 'letter')
+            ? line.match(/([a-zA-Z])/g).length : line.length)
 
 }
 
