@@ -1,12 +1,41 @@
 graduates = data => {
 
-    return data.filter(n => n.score > 75).reduce((a,b)=> {
+    // SHORT VERSION
+    // return data.filter(n => n.score > 75).reduce((a,b)=> {
 
-        a[b.class] = (a[b.class] || data.filter(cls=> cls.class == b.class && cls.score > 75))
-        delete b.class;
-        return a;
+    //     a[b.class] = (a[b.class] || data.filter(cls=> cls.class == b.class && cls.score > 75))
+    //     delete b.class;
+    //     return a;
 
-    },{})
+    // },{})
+
+    // LONG VERSION
+
+    let cache = [], obj = {};
+
+    const gradStudents = className => {
+        let name = {}, students = [];  
+        for (let n in data) {
+          if (data[n].class == className && data[n].score > 75) {
+            name.name = data[n].name;
+            name.score = data[n].score;
+            students.push(name)
+          }
+        }
+
+        return students;
+    }
+
+    for (let b in data) {
+
+        if (data[b].score > 75) {
+            obj[data[b].class] = gradStudents(data[b].class)
+        }
+
+    }
+
+    return obj;
+
 }
 
 console.log(graduates([
