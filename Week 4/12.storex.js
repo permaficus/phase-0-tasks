@@ -6,25 +6,25 @@ countProfit = data => {
     let cart = [];
 
     const getOrderQty = (product) => {
-      let sum = [];
-      for (let p in data) {
-          if (product == data[p].product) {sum.push(data[p].amount)}
-      }
-      return sum;
+        let sum = [];
+        for (let p in data) {
+            if (product == data[p].product) {sum.push(data[p].amount)}
+        }
+        return sum;
     }
     
     const totalOrderQty = amount => {
-      let sum = 0;
-      for (let n in amount) {sum += amount[n];}
-      return sum;
+        let sum = 0;
+        for (let n in amount) {sum += amount[n];}
+        return sum;
     }
 
     const getShopper = product => {
-      let shopper = [];
-      for (let s in data) {
-        if (product == data[s].product) {shopper.push(data[s].name)}
-      }
-      return shopper;
+        let shopper = [];
+        for (let s in data) {
+          if (product == data[s].product) {shopper.push(data[s].name)}
+        }
+        return shopper;
     }
 
     if (data.length==0) {return []}
