@@ -32,8 +32,10 @@ countProfit = data => {
     // return [...Array(stockCard.length)].map((_,b)=> {
     for (let b in stockCard) {
         let cache = {}, 
+        
         // orderQty = data.map(el=> {return (el.product == stockCard[b][0]) ? el.amount:0}).filter(n=>n>0)
         orderQty = getOrderQty(stockCard[b][0]);
+
         // sumQty = orderQty.reduce((a,b)=> a+b,0), 
         sumQty = totalOrderQty(orderQty);
 
@@ -44,12 +46,12 @@ countProfit = data => {
 
         // cache.Shoppers = (stock >= 0) ? data.map(el => {return (el.product == stockCard[b][0]) ? el.name:''})
           // .filter(name=>name!==''): [];
-        
         cache.Shoppers = (stock >=0) ? getShopper(stockCard[b][0],stockCard[b][2]):[]
 
         cache.leftOver = (stock < 0) ? stockCard[b][2]:stock;
         cache.Profit = (stock < 0) ? 0:stockCard[b][1] * eligibleQty;
-       // return cache;
+       
+        // return cache;
         cart.push(cache)
     
     }//)

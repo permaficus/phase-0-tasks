@@ -11,30 +11,17 @@ graduates = data => {
 
     // LONG VERSION
 
-    let obj = {};
+    let cacheClass = [], students = {};
+    
+    for (let n in data) {if (data[n].score > 75) {cacheClass.push(data[n])}}
+    
+    cacheClass.forEach (el => {
+        students[el.class] = students[el.class] || [];
+        students[el.class].push(el)
+        delete el.class
+    })
 
-    const gradStudents = className => {
-        let name = {}, students = [];  
-        for (let n in data) {
-          if (data[n].class == className && data[n].score > 75) {
-            name.name = data[n].name;
-            name.score = data[n].score;
-            students.push(name)
-          }
-        }
-
-        return students;
-    }
-
-    for (let b in data) {
-
-        if (data[b].score > 75) {
-            obj[data[b].class] = gradStudents(data[b].class)
-        }
-
-    }
-
-    return obj;
+    return students
 
 }
 
@@ -113,4 +100,4 @@ console.log(graduates([
   // }
   
   
-  console.log(graduates([])); //{}
+  console.log(graduates([]));
