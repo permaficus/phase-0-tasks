@@ -12,6 +12,7 @@ findmedian = arr => {
             max = n[c]; n[c]=min; n[c+1]=max; f++}}
         return (f==0) ? n:sorting(n);
     }
+    
     arr = sorting(arr);
 
     return arr.length%2 == 0 ? (arr[arr.length/2]+arr[arr.length/2-1])/2 : arr[(arr.length-1)/2]

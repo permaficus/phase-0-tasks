@@ -1,20 +1,19 @@
 graduates = data => {
 
     // SHORT VERSION
-    // return data.filter(n => n.score > 75).reduce((a,b)=> {
+    return data.filter(n => n.score > 75).reduce((a,b)=> {
 
-    //     a[b.class] = (a[b.class] || data.filter(cls=> cls.class == b.class && cls.score > 75))
-    //     delete b.class;
-    //     return a;
+        a[b.class] = (a[b.class] || data.filter(cls=> cls.class == b.class && cls.score > 75))
+        delete b.class;
+        return a;
 
-    // },{})
+    },{})
 
     // LONG VERSION
-
     let cacheClass = [], students = {};
     
     for (let n in data) {if (data[n].score > 75) {cacheClass.push(data[n])}}
-    
+
     cacheClass.forEach (el => {
         students[el.class] = students[el.class] || [];
         students[el.class].push(el)
