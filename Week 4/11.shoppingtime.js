@@ -6,21 +6,19 @@ shopping = (member,money) => {
     const products = {'Sepatu Stacattu':1500000,'Baju Zoro':500000,'Baju brand H&N':250000,
         'Sweater Uniklooh':175000,'Casing Handphone':50000}
 
-    // hmmmmmm
-
-    let am = money, 
-    avp = Object.keys(products).map((a)=> ( am - products[a] < 0) ? am - products[a] : am -= products[a])
-        .filter((b)=> b >= 0);
-
-    let cart = [...Array(avp.length)].map((_,x)=> {
-        return Object.keys(products).filter((a)=> products[a]==((x > 0) ? (avp[x-1] - avp[x]):money-avp[x])).toString();
-    })
+    let change = money, cart = [];
+    for (let c in products) {
+        if (change >= products[c]) {
+            cart.push(c)
+            change -= products[c];
+        }
+    }
 
     let sc = {};
     sc.ID = member;
     sc.Money = money;
     sc.Cart = cart;
-    sc.Change = avp.pop();
+    sc.Change = change;
 
     return sc;
 
