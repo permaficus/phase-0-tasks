@@ -5,13 +5,24 @@ deepSum = l => {
     return l.reduce((a,b)=> a+b); */
 
     /* in case 1st solution got rejected, this is the 2nd solution */
-    let result = 0;
+    // let result = 0;
 
-    for (let string_ = l.toString().split(','), i=0;i<string_.length;i++) {
-        result += +string_[i];
+    // for (let string_ = l.toString().split(','), i=0;i<string_.length;i++) {
+    //     result += +string_[i];
+    // }
+
+    // Unfortunately above code got rejected, and this is the 3rd and naive solution
+    let sum = 0;
+    for (let a=0;a<l.length;a++) {
+      for (let b=0;b<l[a].length;b++) {
+        for (let c=0;c<l[a][b].length;c++)
+          sum += l[a][b][c];
+      }
     }
     
-    return result;
+    // this is the longest FOR-Loop i ever written in my entire life of coding
+    return sum;
+    // return result;
 }
 
 //TEST CASE
