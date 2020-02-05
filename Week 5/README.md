@@ -8,6 +8,6 @@
 8. <a href="/Week%205/8.findsuspect.js">Cari Pelaku</a>
 13. <a href="/Week%205/13.mfln.js">Most Frequent Large Number</a>
 14. <a href="/Week%205/14.passwordgenerator.js">Password Generator</a>
-15. <a href="/Week%205/3.allucaneat.js">All You Can Eat</a>
-16. <a href="/Week%205/4.totaldigit.js">Total Digit Rekursif</a>
+15. <a href="/Week%205/15.allucaneat.js">All You Can Eat</a>
+16. <a href="/Week%205/16.totaldigit.js">Total Digit Rekursif</a>
 17. <a href="/Week%205/17.xterus.js">Kali Terus Sampai Lebaran</a>
