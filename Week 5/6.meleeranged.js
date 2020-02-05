@@ -3,17 +3,18 @@ meleeGrouping = str => {
     if (!str) {return [];}
 
     str = str.split(',');
-    let cache = [];
-    str = str.reduce((hero,group) => {
+    let cache = [], hero = [];
+    // str = str.reduce((hero,group) => {
+    for (let h in str) {
+        cache = str[h].split('-');
+        // SHORTCUT ..... nguantukkk poolll 06/02/2020 00:31:17
+        let n = (cache[1] == 'Ranged') ? 0:1;
+        hero[n] = hero[n] || [];
+        hero[n].push(cache[0]);
+    }
+    // },{})
 
-        cache = group.split('-');
-        hero[cache[1]] = hero[cache[1]] || [];
-        hero[cache[1]].push(cache[0]);
-        return hero;
-
-    },{})
-
-    return Object.values(str);
+    return hero
 
 }
 
