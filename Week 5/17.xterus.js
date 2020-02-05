@@ -1,7 +1,10 @@
 xterus = n => {
-
-    n = eval(String(n).split('').join('*'));
-    return (n > 9 ) ? xterus(n):n;
+    // zzz...zzz....zzz
+    // n = eval(String(n).split('').join('*'));
+    let sum = 1;
+    n = n.toString();
+    for (let i=0;i<n.length;i++) {sum *= +n[i]}
+    return (sum > 9 ) ? xterus(sum):sum;
 }
 
 // TEST CASES
