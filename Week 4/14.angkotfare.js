@@ -1,6 +1,14 @@
 angkotFare = data => {
 
-    const route = ['A','B','C','D','E','F'];
+    let route = ['A','B','C','D','E','F'], cacheResult = [];
+
+    const index_Of = target => {
+        for (let c=0;c<route.length;c++) {
+            if (target == route[c]) {
+                return c;
+            }
+        }
+    }
 
    // return [...Array(data.length)].map((_,a)=> {
     for (let a in data) {
@@ -8,13 +16,17 @@ angkotFare = data => {
         ol.Passenger = data[a][0];
         ol.From = data[a][1];
         ol.To = data[a][2];
-        ol.Fare = (route.indexOf(data[a][2]) - route.indexOf(data[a][1])) * 2000;
+        // This one 'asume' to be MAGICAL, ???
+        // ol.Fare = (route.indexOf(data[a][2]) - route.indexOf(data[a][1])) * 2000;
+        ol.fare = (index_Of(data[a][2]) - index_Of(data[a][1])) * 2000
         // return ol;
-        data.splice(a,1,ol);
+        // maybe this one too ?????
+        // data.splice(a,1,ol);
+        cacheResult.push(ol);
     // })
     }
 
-    return data;
+    return cacheResult;
 }
 
 //TEST CASE
