@@ -1,7 +1,17 @@
 checkAB = str => {
 
-    return (str.lastIndexOf('b') - str.indexOf('a')>=2) ? true:false;
+    // 1st Solution and got rejected, again
+    // return (str.lastIndexOf('b') - str.indexOf('a')>=2) ? true:false;
 
+    // 2nd solution
+    let range = 0;
+    for (let c=0;c<str.length;c++) {
+        if (str[c] == 'a' && str[c+4] == 'b' || str[c+1] == 'b') {
+            range++
+        }
+    }
+
+    return (range > 0) ? true:false;
 }
 
 // TEST CASES
