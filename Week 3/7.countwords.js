@@ -1,5 +1,9 @@
 countWords = str => {
+
+    // 1st VERSION
     // return str.match(/\w+/g).length;
+    
+    // 2nd VERSION
     let count = 1;
     for (let c in str) {
         if (str[c]===' ') {

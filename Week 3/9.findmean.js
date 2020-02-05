@@ -1,6 +1,9 @@
 findMean = data => {
 
+    // SHORTEST VERSION
     // return Math.round(data.reduce((a,b) => a+b) / data.length);
+    
+    // 2nd VERSION
     let sum = 0;
     for (let n in data) {sum += data[n]}
     return Math.round(sum/data.length);

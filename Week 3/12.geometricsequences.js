@@ -2,9 +2,11 @@ isGeometric = (data) => {
 
     let commonRatio = data[1]/data[0];
 
+    // 1st VERSION
     // return (data.reduce((a,b,c)=>{let t = b/data[c-1];return (a<b)?t
     //     :undefined})==data[1]/data[0]) ? true:false;
 
+    // 2nd VERSION
     for (let g=2;g<data.length;g++) {
         if (data[g]/data[g-1] !== commonRatio) { return false;}
     }

@@ -3,10 +3,12 @@ nearestTarget = a => {
     let x = [], o = [], min_ = [a.length]
     if (!a.includes('x') || !a.includes('o')) {return 0;}
 
+    // REJECTED VERSION (DO NOT USING BUILT-IN FUNCTION !!!)
     // a.reduce((_,a,i)=>{ (a=='x') ? x.push(i):(a=='o') ? o.push(i):''},0);
     
     for (let ob in a) {(a[ob]=='x') ? x.push(ob):(a[ob]=='o')? o.push(ob):''}
     
+    // REJECTED VERSION (DO NOT USING BUILT-IN FUNCTION !!!)
     // return Math.min(...x.map((_,a)=>{return (x[a]<o[0]) ? o[0]-x[a]:x[a]-o[0]}))
     
     for (let min=0, c=0;c<=x.length;c++) {
