@@ -20,7 +20,6 @@ deepSum = l => {
       }
     }
     
-    // this is the longest FOR-Loop i ever written in my entire life of coding
     return sum;
     // return result;
 }
