@@ -70,9 +70,7 @@
 // SHORT VERSION
 /* mineTycoon = (mine,steps) => {
 	let minerals = {'Silver': 's', 'Gold':'g', 'Copper':'c', 'Diamond':'d'}, counter=0, mineCache = []; 
-
 	for (let c in mine) { mine = [].concat.apply([],mine)	}
-
 	return mine.toString().split(',').reduce((a,b)=> {
 		counter++
 		if (counter <= steps) {
@@ -83,8 +81,6 @@
 		}
 		return a
 	},[])
-	
-	
 } */
 
 // LONG VERSION
@@ -93,7 +89,6 @@ function mineTycoon(mine, steps) {
 	let counter = 0, mineCollection = [];
 
 	const processingCollection = a => {
-
 		let f = 0;
 		if (mineCollection.length == 0) {mineCollection.push(a)} else {
 			for (let i=0;i<mineCollection.length;i++) {
