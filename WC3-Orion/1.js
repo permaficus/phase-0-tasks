@@ -86,7 +86,7 @@
 // LONG VERSION
 function mineTycoon(mine, steps) {
 	//implementasi function disini!
-	let counter = 0, mineCollection = [];
+	let counter = 0, mineCollection = [], minerals = {'g':'Gold','c':'Copper','d':'Diamond','s':'Silver'};
 
 	const processingCollection = a => {
 		let f = 0;
@@ -100,17 +100,13 @@ function mineTycoon(mine, steps) {
 		}
 		if (f == 0) {mineCollection.push(a)}
 	}
-	const identifyMinerals = m => {
-		let minerals = (m == 'c') ? 'copper':(m=='s') ? 'silver' : (m=='g') ? 'gold' : (m=='d') ? 'diamond':'';
-		(minerals !== '') ? processingCollection([1,minerals]):''
-	}
 
 	for (let x=0;x<mine.length;x++) {
 		for (let y=0;y<mine[x].length;y++) 
 		{
 			counter++;
 			if (counter > steps) {break;}
-			identifyMinerals([mine[x][y]])
+			(minerals[mine[x][y]] !== undefined) ? processingCollection([1,minerals[mine[x][y]]]):''
 			mine[x][y] = ' '
 		}
 	}
