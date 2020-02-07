@@ -68,7 +68,7 @@
  * PRINT MINE_COLLECTION
 */
 // SHORT VERSION
-mineTycoon = (mine,steps) => {
+/* mineTycoon = (mine,steps) => {
 	let minerals = {'Silver': 's', 'Gold':'g', 'Copper':'c', 'Diamond':'d'}, counter=0, mineCache = []; 
 
 	for (let c in mine) { mine = [].concat.apply([],mine)	}
@@ -85,7 +85,7 @@ mineTycoon = (mine,steps) => {
 	},[])
 	
 	
-}
+} */
 
 // LONG VERSION
 function mineTycoon(mine, steps) {
@@ -96,30 +96,24 @@ function mineTycoon(mine, steps) {
 
 		let f = 0;
 		if (mineCollection.length == 0) {mineCollection.push(a)} else {
-
 			for (let i=0;i<mineCollection.length;i++) {
 				if (mineCollection[i][1] == a[1]) {
 					mineCollection[i][0] += 1;
 					f++;
 				}
 			}
-
 			if (f == 0) {mineCollection.push(a)}
-
 		}
 	}
 	const identifyMinerals = m => {
-
 		let minerals = (m == 'c') ? 'copper':(m=='s') ? 'silver' : (m=='g') ? 'gold' : (m=='d') ? 'diamond':'';
 		(minerals !== '') ? processingCollection([1,minerals]):''
-
 	}
 
 	for (let x=0;x<mine.length;x++) {
 		for (let y=0;y<mine[x].length;y++) 
 		{
 			counter++;
-			
 			if (counter > steps) {break;}
 			identifyMinerals([mine[x][y]])
 			mine[x][y] = ' '
