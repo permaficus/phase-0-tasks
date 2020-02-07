@@ -29,8 +29,6 @@ function slice(data, start, end) {
     start = start || 0; end = end || data.length;
    
     let newArray = [];
-    
-    if (start > end) {return newArray;}
 
     for (let i=start;i<=end-1;i++){newArray.push(data[i]);}
 
