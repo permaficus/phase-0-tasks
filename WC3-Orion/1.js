@@ -100,6 +100,18 @@ function mineTycoon(mine, steps) {
 		}
 		if (f == 0) {mineCollection.push(a)}
 	}
+	const sortCollection = n => {
+		let f=0;
+		for (let min=0,max=0, i=0;i<n.length-1;i++) {
+			if (n[i][0] < n[i+1][0]) {
+				min=n[i];max=n[i+1];n[i]=max;n[i+1]=min;
+				f++
+			}
+		}
+
+		return (f==0) ? n:sortCollection(n)
+
+	}
 
 	for (let x=0;x<mine.length;x++) {
 		for (let y=0;y<mine[x].length;y++) 
@@ -111,7 +123,7 @@ function mineTycoon(mine, steps) {
 		}
 	}
 
-	return mineCollection;
+	return sortCollection(mineCollection);
 	// console.log(mine)
 }
 
