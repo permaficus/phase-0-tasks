@@ -90,15 +90,15 @@ function mineTycoon(mine, steps) {
 
 	const processingCollection = a => {
 		let f = 0;
-		if (mineCollection.length == 0) {mineCollection.push(a)} else {
+		if (mineCollection.length == 0) {f=0} else {
 			for (let i=0;i<mineCollection.length;i++) {
 				if (mineCollection[i][1] == a[1]) {
 					mineCollection[i][0] += 1;
 					f++;
 				}
 			}
-			if (f == 0) {mineCollection.push(a)}
 		}
+		if (f == 0) {mineCollection.push(a)}
 	}
 	const identifyMinerals = m => {
 		let minerals = (m == 'c') ? 'copper':(m=='s') ? 'silver' : (m=='g') ? 'gold' : (m=='d') ? 'diamond':'';
