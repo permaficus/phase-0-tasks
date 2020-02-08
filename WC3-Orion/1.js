@@ -48,9 +48,6 @@
  * 				COUNT the PROCCESS
  * 				IF COUNT EXCEED STEPS THEN EXIT FOR
  * 				CALL IDENTIFY_MINERALS OF INDEX MINE[X][Y]
- * 					(IDENTIFY_MINERALS)
- * 						IF INDEX [X][Y] IS MINERALS THEN
- * 							START PROCESSING
  * 					(PROCESSING_MINERALS)
  * 						IF mineCollection IS EMPTY
  * 							PUSH identifiedMinerals & SET amount TO 1
@@ -65,7 +62,7 @@
  *			END FOR
  *		END FOR
  *  
- * PRINT MINE_COLLECTION
+ * PRINT MINE_COLLECTION WITH DESC SORT.
 */
 // SHORT VERSION
 /* mineTycoon = (mine,steps) => {
@@ -123,8 +120,8 @@ function mineTycoon(mine, steps) {
 		}
 	}
 
-	return sortCollection(mineCollection);
 	// console.log(mine)
+	return sortCollection(mineCollection);
 }
 
 var mine1 = [
