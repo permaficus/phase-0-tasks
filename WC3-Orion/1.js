@@ -41,31 +41,9 @@
  * - Wajib menuliskan Pseudocode!
  * - Dilarang menggunakan built-in function .reduce .filter .map .indexOf .lastIndexOf etc
  *
- * PSEUDOCODE
- * SET LABEL counter AS INT, mineCollection AS ARRAY
- * 		FOR x < LENGTH OF MINE
- * 			FOR Y < LENGHT OF MINE[X]
- * 				COUNT the PROCCESS
- * 				IF COUNT EXCEED STEPS THEN EXIT FOR
- * 				CALL IDENTIFY_MINERALS OF INDEX MINE[X][Y]
- * 					(PROCESSING_MINERALS)
- * 						IF mineCollection IS EMPTY
- * 							PUSH identifiedMinerals & SET amount TO 1
- * 						ELSE
- * 							CHECK if minerals IS ALREADY EXIST
- * 								IF TRUE THEN 
- * 									EDIT amount ON INDEX 0
- * 								ELSE
- * 									PUSH identifiedMinerals & SET AMOUNT TO 1
- *								END IF
- *						END IF
- *			END FOR
- *		END FOR
- *  
- * PRINT MINE_COLLECTION WITH DESC SORT.
 */
 // SHORT VERSION
-/* mineTycoon = (mine,steps) => {
+mineTycoon = (mine,steps) => {
 	let minerals = {'Silver': 's', 'Gold':'g', 'Copper':'c', 'Diamond':'d'}, counter=0, mineCache = []; 
 	for (let c in mine) { mine = [].concat.apply([],mine)	}
 	return mine.toString().split(',').reduce((a,b)=> {
@@ -78,7 +56,7 @@
 		}
 		return a
 	},[])
-} */
+}
 
 // LONG VERSION
 function mineTycoon(mine, steps) {
@@ -122,6 +100,33 @@ function mineTycoon(mine, steps) {
 
 	// console.log(mine)
 	return sortCollection(mineCollection);
+}
+
+// ALTERNATE VERSION
+mineTycoon = (mine,steps) => {
+
+	let collection = [[0,'Copper'],[0,'Silver'],[0,'Gold'],[0,'Diamond']];
+
+	for (let x in mine) {
+		for (let y=0;y<mine[x].length;y++) {
+			steps--;
+			mine[x][y] == 'c' ? collection[0][0]++ : mine[x][y] == 's' ? collection[1][0]++
+				: mine[x][y] == 'g' ? collection[2][0]++ : mine[x][y] == 'd' ? collection[3][0]++
+				: '';
+			mine[x][y] = ' '
+			if (steps == 0) {break;}
+		}
+	}	
+
+	// render dipslay
+	let cache = []
+	for (let d in collection) {
+		if (collection[d][0] !== 0){
+			cache.push(collection[d])
+		}
+	}
+
+	return cache;
 }
 
 var mine1 = [
