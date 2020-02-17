@@ -28,19 +28,19 @@ END IF */
 
 function subset(arr1,arr2) {
  //tulis function disini
- const indexOf = (data,target) => {
-     for (let index in data) {
-         if (data[index] == target) {
-             return +index
-         }
-     }
-     return -1;
- }
+//  const indexOf = (data,target) => {
+//      for (let index in data) {
+//          if (data[index] == target) {
+//              return +index
+//          }
+//      }
+//      return -1;
+//  }
 
  let limit = arr1.length, f = 0;
  
  for (let i in arr1) {
-    if (indexOf(arr2,arr1[i]) >= 0) {
+    if (arr2.indexOf(arr1[i]) >= 0) {
         f++
     }
  }
