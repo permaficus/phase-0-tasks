@@ -15,12 +15,11 @@ RULES:
 */
   
 function reverse(arr){
-    //implementasi function disini 
+    //implementasi function disini  
 
-    for (let id, i=0;i<arr.length;i++) {
-      if (i == 0) {id=arr[i]}
-      if (i == arr.length-1) {arr[0] = arr[i];arr[i]=id}
-    }   
+    if (arr.length < 1) return [];
+
+    let id = arr[0]; arr[0] = arr[arr.length-1];arr[arr.length-1] = id;
 
     let cache = []
     for (let x=0;x<arr.length;x++) {
