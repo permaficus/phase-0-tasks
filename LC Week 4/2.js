@@ -22,13 +22,13 @@ function parseString(string){
   const num = '1234567890';
   let obj = {};
 
-  const indexOf = target => {
-     for (let i in num) {if (num[i] == target) { return +i }}
-     return -1;
-  }
+//   const indexOf = target => {
+//      for (let i in num) {if (num[i] == target) { return +i }}
+//      return -1;
+//   }
 
   for (let i=0;i<string.length;i++ ) {
-     if (indexOf(string[i]) == -1) { obj[string[i]] = (obj[string[i]] || 0)+1}
+     if (num.indexOf(string[i]) == -1) { obj[string[i]] = (obj[string[i]] || 0)+1}
   }
 
   return obj;
