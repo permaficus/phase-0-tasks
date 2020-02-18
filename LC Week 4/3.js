@@ -17,32 +17,20 @@ RULES:
 function reverse(arr){
     //implementasi function disini 
 
-    const sort = data => {
-      let f = 0;
-      for (let x=0;x<data.length;x++) {
-          for (let max =0, y=0;y<data[x].length;y++) {
-            if (data[x][y] < data[x][y+1]) {
-              max = data[x][y+1];data[x][y+1] = data[x][y];data[x][y] = max;f++
-            }
-          }
-      }
-      return (f==0) ? data:sort(data);
-    }
-
     for (let id, i=0;i<arr.length;i++) {
       if (i == 0) {id=arr[i]}
       if (i == arr.length-1) {arr[0] = arr[i];arr[i]=id}
     }   
 
-    arr = sort(arr);
-
-    for (let x=0;x<arr.length;x++){
-      for (let id, y=0;y<arr[x].length;y++){
-        arr[x][y] = (arr[x][y] == 1) ? 0: (arr[x][y] == 0) ? 1:arr[x][y]
+    let cache = []
+    for (let x=0;x<arr.length;x++) {
+      cache.push([])
+      for (let y=arr[x].length-1;y>=0;y--) {
+          cache[x].push((arr[x][y] == 0) ? 1:(arr[x][y]==1) ? 0: arr[x][y])
       }
     }
 
-    return arr;
+    return cache;
 }
 
 
