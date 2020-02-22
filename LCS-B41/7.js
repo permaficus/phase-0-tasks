@@ -81,7 +81,7 @@ function groupByYear(arr) {
         movies[arr[i][3]].push(obj)
         Object.assign(movies)
     }
-    console.log(movies)
+    return movies
 }
 
 
