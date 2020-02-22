@@ -23,6 +23,24 @@ Ouput array 2D:
 */
 function converstionTime(list) {
     // your code here..
+    let time = {'1':60,'2':120}
+
+    const split = (target,delimiter) => {
+        let [words,result] = ['',[]]
+        for (let i=0;i<target.length;i++) {
+            if (target[i] !== delimiter) {words+= target[i];} 
+            else {result.push(words);words='';}
+        }
+        result.push(words);
+        return result;
+    }
+
+    for (let t in list) {
+        let ti = split(list[t][2],':')
+        list[t][2] = `${time[ti[0]] + +ti[1]} minutes`
+    }
+
+    return list;
     
 }
 
@@ -37,6 +55,12 @@ ouput berupa array of array
 */
 function sortByRating(list) {
     // your code here..
+    let f = 0;
+    for (let min=0, l=0;l<list.length-1;l++) {
+        if (list[l][0] < list[l+1][0]) { min = list[l];list[l] = list[l+1];list[l+1] = min;f++;}
+    }
+
+    return f == 0 ? list:sortByRating(list)
 }
 
 
@@ -47,6 +71,17 @@ format object untuk permovienya
 */
 function groupByYear(arr) {
     // your code here..
+    let movies = {};
+    for (let i in arr) {
+        movies[arr[i][3]] = movies[arr[i][3]] || [];
+        let obj = {};
+        obj.Title = arr[i][1];
+        obj.Duration = arr[i][2];
+        obj.Ratings = `${arr[i][0]}/10`
+        movies[arr[i][3]].push(obj)
+        Object.assign(movies)
+    }
+    console.log(movies)
 }
 
 

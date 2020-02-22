@@ -37,7 +37,7 @@ function groupStage(teams) {
       let f = 0;
       for (let min=0, i=0;i<data.length-1;i++) {
         if (data[i][1] < data[i+1][1]) {
-          min = data[i][1];data[i][1] = data[i+1][1];data[i+1][1] = min;f++
+          min = data[i];data[i] = data[i+1];data[i+1] = min;f++
         }
       }
       return (f==0) ? data:sort(data)
