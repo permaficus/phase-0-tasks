@@ -13,11 +13,7 @@ Harus memakai while-loop
 */
 function ticTacToe(array) {
 	//good luck!
-/* 	[
-		[x,0,x]
-		[0,0,x]
-		[x,x,0]
-	] */
+
 	const move = [[0,1,2],[0,3,6],[0,4,8],[2,4,6],[6,7,8],[3,4,5],[1,4,7],[2,6,8]]
 	let [c,x_,o_,board,axis] = [0,0,0,array,0]
 
