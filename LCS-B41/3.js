@@ -13,8 +13,37 @@ Harus memakai while-loop
 */
 function ticTacToe(array) {
 	//good luck!
-	// Working in progress
-	
+/* 	[
+		[x,0,x]
+		[0,0,x]
+		[x,x,0]
+	] */
+	const move = [[0,1,2],[0,3,6],[0,4,8],[2,4,6],[6,7,8],[3,4,5],[1,4,7],[2,6,8]]
+	let [c,x_,o_,board,axis] = [0,0,0,array,0]
+
+	while (c<8) {
+		
+		while (axis < 3) {
+			let x = move[c][axis];
+
+			if (x >=0 && x <3) { x_ += (board[0][axis] == 'X') ? 1:0; o_ += (board[0][axis] == 'O') ? 1:0 }
+			if (x >=3 && x <6) { x_ += (board[1][axis] == 'X') ? 1:0; o_ += (board[1][axis] == 'O') ? 1:0 }
+			if (x >=6 && x <9) { x_ += (board[2][axis] == 'X') ? 1:0; o_ += (board[2][axis] == 'O') ? 1:0 }
+			
+			axis++
+		}
+		
+		if (x_ <= 2 && o_ <= 2) {
+			x_ = 0; o_ = 0;
+		} else {
+			break;
+		}
+
+		c++;
+		axis=0;
+	}
+
+	return x_ > o_ ? 'Winner : X' : x_ < o_ ? 'Winner : O' : 'Draw!'
 }
 
 console.log(
@@ -29,7 +58,7 @@ console.log(
 	ticTacToe([
 		['O', 'O', 'O'],
 		['O', 'X', 'X'],
-		['E', 'X', 'X']
+		['X', 'O', 'X']
 	])
 ); //"O"
 
