@@ -13,7 +13,7 @@ Harus memakai while-loop
 */
 function ticTacToe(array) {
 	//good luck!
-	let [win,loose] = [0,0];
+	// Working in progress
 	
 }
 
