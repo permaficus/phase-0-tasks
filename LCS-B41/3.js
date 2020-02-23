@@ -19,12 +19,12 @@ function ticTacToe(array) {
 	const col = {0:0,1:1,2:2,3:0,4:1,5:2,6:0,7:1,8:2};
 	// Row conversion
 	const row = n => {
-        switch (true) {
-            case (n >=0 && n <3) : return 0;
-            case (n >=3 && n <6) : return 1;
-            case (n >=6 && n <9) : return 2;
-        }
-    }
+		switch (true) {
+			case (n >=0 && n <3) : return 0;
+			case (n >=3 && n <6) : return 1;
+			case (n >=6 && n <9) : return 2;
+		}
+	}
 
 	let [c,x_,o_,board] = [0,0,0,array]
 
