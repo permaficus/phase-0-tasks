@@ -46,7 +46,7 @@ function groupSecondLargest(numbers) {
 
 }
 
-// console.log(groupSecondLargest([28, 21, 27, 18])) //[ [ '14', 28 ], [ '7', 21 ], [ '9', 27, 18 ] ]
-// console.log(groupSecondLargest([32, 16, 24, 18, 48])) //[ [ '16', 32 ], [ '8', 16 ], [ '12', 24 ], [ '9', 18 ], [ '24', 48 ] ]
+console.log(groupSecondLargest([28, 21, 27, 18])) //[ [ '14', 28 ], [ '7', 21 ], [ '9', 27, 18 ] ]
+console.log(groupSecondLargest([32, 16, 24, 18, 48])) //[ [ '16', 32 ], [ '8', 16 ], [ '12', 24 ], [ '9', 18 ], [ '24', 48 ] ]
 console.log(groupSecondLargest([6, 9, 21])) //[ [ '3', 6, 9 ], [ '7', 21 ] ]
 
