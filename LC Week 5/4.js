@@ -48,14 +48,15 @@ function splitTransactions(array) {
 */
 function sortItemsByNumber(array) {
    //implementasikan fungsi ini 
-   let f = 0;
+/*    let f = 0;
    for (let min, i=0;i<array.length-1;i++) {
       if (+(array[i][0]) > +(array[i+1][0])) {
          min = array[i+1];array[i+1] = array[i];array[i] = min;f++;
       }
    }
 
-   return (f == 0) ? array:sortItemsByNumber(array)
+   return (f == 0) ? array:sortItemsByNumber(array) */
+   return array.sort((a,b) => a[0] - b[0])
 }
 
 /*
