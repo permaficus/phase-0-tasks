@@ -27,7 +27,7 @@
 
 function groupSecondLargest(numbers) {
   //Implementasikan function ini
-  let result = [];
+  let cache_ = [], result = [];
   const factorial = n => {
     let cache = []
     for (let i=1;i<=n;i++) {
@@ -37,12 +37,22 @@ function groupSecondLargest(numbers) {
     }
     return cache;
   }
-
-  for (let i=0;i<numbers.length;i++) {
-    result.push(factorial(numbers[i]))
+  const grouping = array => {
+    let group = [];
+    for (let x=0;x<array.length;x++){
+      group.push([])
+      group[x].push(array[x][array[x].length-2],array[x][array[x].length-1])
+    }
+    return group;
   }
 
-  return result;
+  // templating
+  for (let i=0;i<numbers.length;i++) {
+    cache_.push(factorial(numbers[i]))
+  }
+
+  // return cache_
+  return grouping(cache_);
 
 }
 
